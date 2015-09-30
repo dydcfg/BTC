@@ -19,7 +19,7 @@ class DataTracker:
             if flag != resp["trades"][0]:
                 filename = str(myTime.year)+str(myTime.month)+str(myTime.day)+".data"
                 print filename
-                fp = open(filename,'a+')
+                fp = open("RealtimeData/" + filename,'a+')
                 fp.write(json.dumps(resp)+"\n")
                 fp.close()
                 flag = resp["trades"][0]
